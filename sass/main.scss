@@ -1,8 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:400,500');
 
 $main-font: 'Open sans', sans-serif;
 $second-font: 'Roboto', sans-serif;
 $main-bg-color: #eee;
+$second-bg-color: #272B33;
+
+@mixin headers {
+	font-family: $second-font;
+	font-weight: 500;
+}
+
+@mixin btn-art-hover {
+	transition: all .3s;
+	background: $second-bg-color;
+	color: $main-bg-color;
+}
+
+@mixin btn-art {
+	border: 2px solid $second-bg-color;
+	background: rgba(0,0,0,0);
+	cursor: pointer;
+	font-family: $second-font;
+	padding: 6px 12px;
+}
 
 * {
 	margin: 0;
@@ -30,7 +50,7 @@ button, input, textarea {
 .header {
 	width: 100%;
 	border-bottom: 1px solid #EEE;
-	header {
+	header{
 		display: flex;
 		flex-wrap: wrap;
 		padding: 25px 0;
@@ -40,8 +60,7 @@ button, input, textarea {
 			align-self: center;
 			padding-left: 100px;
 			h1 {
-				font-family: $second-font;
-				font-weight: 500;
+				@include headers;
 				a {
 					color: #000;
 				}
@@ -60,11 +79,16 @@ button, input, textarea {
 						color: #000;
 					}
 					a:hover {
-						color: #272B33;
+						color: $second-bg-color;
 					}
 				}
 			}
-			.header-auth {
+			.header-search {
+				i {
+					font-size: 20px;
+				}
+			}
+			.header-auth, .header-search {
 				align-self: center;
 				margin-left: 15px;
 				a {
@@ -91,33 +115,34 @@ button, input, textarea {
 		.header-posts {
 			background: $main-bg-color;
 			h1 {
-				font-family: $second-font;
-				font-weight: 500;
+				@include headers;
 				padding: 15px;
 			}
 		}
 		.articles-list {
+			width: 100%;
 			ul {
+				width: 100%;
 				display: flex;
 				justify-content: space-between;
 				flex-wrap: wrap;
 				.article-item {
-					width: 45.5%;
+					align-self: flex-start;
+					width: calc(50% - 12.5px);
 					margin-top: 25px;
 					background: $main-bg-color;
 					.article-preview {
 						header {
 							.article-title {
 								p {
-									font-family: $second-font;
-									font-weight: 500;
+									@include headers;
 									padding: 15px;
-									border-bottom: 1px solid silver;
+									border-bottom: 1px solid $second-bg-color;
 								}
 							}
 							.article-static {
 								width: 100%;
-								border-bottom: 1px solid silver;
+								border-bottom: 1px solid $second-bg-color;
 								padding: 5px 0;
 								display: flex;
 								justify-content: space-around;
@@ -144,7 +169,7 @@ button, input, textarea {
 							}
 						}
 						footer {
-							border-top: 1px solid silver;
+							border-top: 1px solid $second-bg-color;
 							width: calc(100% - 20px);
 							display: flex;
 							padding: 10px;
@@ -155,11 +180,15 @@ button, input, textarea {
 								i {
 									margin-right: 5px;
 								}
+								a {
+									color: $second-bg-color;
+								}
 							}
 							button {
-								cursor: pointer;
-								font-family: $second-font;
-								padding: 6px 12px;
+								@include btn-art;
+							}
+							button:hover {
+								@include btn-art-hover;
 							}
 						}
 					}
@@ -167,10 +196,117 @@ button, input, textarea {
 			}
 		}
 	}
+	.view-more-article {
+		max-width: 900px;
+		width: 100%;
+		margin-top: 25px;
+		display: flex;
+		justify-content: center;
+		button {
+			@include btn-art;
+		}
+		button:hover {
+			@include btn-art-hover;
+		}
+	}
+	.pagination {
+		max-width: 900px;
+		width: 100%;
+		margin-top: 25px;
+		ul {
+			display: flex;
+			justify-content: center;
+			li {
+				cursor: pointer;
+				@include headers;
+				margin-left: 15px;
+				padding: 7px 14px;
+				background: $main-bg-color;
+				border: 2px solid $second-bg-color;
+			}
+			li:hover {
+				transition: all .3s;
+				background: $second-bg-color;
+				color: $main-bg-color;
+			}
+		}
+	}
 	.sidebar {
 		max-width: 275px;
 		width: 100%;
+		align-self: flex-start;
 		margin-left: 25px;
-		background: $main-bg-color;
+		.popular-articles {
+			width: 100%;
+			background: $main-bg-color;
+			.header-popular-articles {
+				border-bottom: 1px solid;
+				h1 {
+					font-size: 19px;
+					text-align: center;
+					padding: 10px;
+					@include headers;
+				}
+			}
+			.pop-art-item {
+				width: calc(100% - 20px);
+				padding: 10px;
+				display: flex;
+				border-bottom: 1px solid $second-bg-color;
+				.pop-art-img {
+					img {
+						width: 50px;
+					}
+					p {
+						@include headers;
+						span {
+							font-size: 13px;
+						}
+					}
+				}
+				.pop-art-descr {
+					margin-left: 5px;
+					transition: all .3s;
+					h1, p, span {
+						@include headers;
+						font-size: 15px;
+					}
+					h1 {
+						a {
+							color: #000;
+						}
+					}
+					p {
+						font-weight: 400;
+						font-size: 13px;
+						i {
+							font-size: 16px;
+						}
+						span {
+							font-family: $main-font;
+						}
+					}
+				}
+			}
+			.pop-art-item:last-child {
+				border-bottom: 0;
+			}
+			.pop-art-item:hover {
+				transition: all .3s;
+				background: #DDD;
+			}
+		}
+	}
+}
+
+.footer {
+	width: 100%;
+	background: $main-bg-color;
+	footer {
+		p {
+			line-height: 70px;
+			margin-left: 100px;
+			@include headers;
+		}
 	}
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>LiveProger</title>
+	<title>ProgerLife</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/assets/css/font-awesome.min.css">
 </head>
@@ -12,7 +12,7 @@
 		<section class="header">
 			<header>
 				<div class="logo">
-					<h1><a href="/">LiveProger</a></h1>
+					<h1><a href="/">ProgerLife</a></h1>
 				</div>
 				<div class="menu">
 					<ul>
@@ -22,6 +22,9 @@
 						<li><a href="#">Группы</a></li>
 						<li><a href="#">Пользователи</a></li>
 					</ul>
+<!-- 					<div class="header-search">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</div> -->
 					<div class="header-auth">
 						<a href="#">
 							<i class="fa fa-user-circle" aria-hidden="true"></i>
@@ -42,6 +45,7 @@
 							<article class="article-preview">
 								<header>
 									<div class="article-title">
+										<!-- В названии должно быть ограничение в 50 символов или где-то так -->
 										<p>Как выучить php за 1 ночь?</p>
 									</div>
 									<div class="article-static">
@@ -67,37 +71,225 @@
 								</div>
 								<footer>
 									<button type="submit">Продолжить</button>
-									<p><i class="fa fa-user" aria-hidden="true"></i>Никита Ворон</p>
+									<p>
+										<i class="fa fa-user" aria-hidden="true"></i>
+										<a href="#">Степан Неретин</a>
+									</p>
 								</footer>
 							</article>
 						</li>
 						<li class="article-item">
 							<article class="article-preview">
 								<header>
-									<p>Название записи</p>
+									<div class="article-title">
+										<!-- В названии должно быть ограничение в 50 символов или где-то так -->
+										<p>Что такое git?</p>
+									</div>
+									<div class="article-static">
+										<p>
+											<i class="fa fa-comment" aria-hidden="true"></i>
+											<span>12</span>
+										</p>
+										<p>
+											<i class="fa fa-eye" aria-hidden="true"></i>
+											<span>1228</span>
+										</p>
+										<p>
+											<i class="fa fa-heart" aria-hidden="true"></i>
+											<span>6</span>
+										</p>
+									</div>
 								</header>
+								<div class="article-preview-descr">
+									<!-- Картинку загружать не обязательно, если ее нету то поставь заглушку, она есть в папке img -->
+									<img class="article-preview-img" src="http://i85.photobucket.com/albums/k79/thien92/animepapernetavatar-standard-anime-k-on-k-on-avatar-192222-mayuuki-preview-c17aab39.jpg" alt="img">
+									<!-- Максимальное количество символов должно быть таким, чтобы текст не выходилза рамки высоты картинки -->
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quibusdam illo necessitatibus, recusandae quia consectetur porro sapiente maiores ratione. Dolorem incidunt nam, assumenda recusandae autem consequuntur perferendis voluptatem vitae commodi.</p>
+								</div>
+								<footer>
+									<button type="submit">Продолжить</button>
+									<p>
+										<i class="fa fa-user" aria-hidden="true"></i>
+										<a href="#">Максим Лис</a>
+									</p>
+								</footer>
 							</article>
 						</li>
 						<li class="article-item">
 							<article class="article-preview">
 								<header>
-									<p>Название записи</p>
+									<div class="article-title">
+										<!-- В названии должно быть ограничение в 50 символов или где-то так -->
+										<p>Как правильно кушат аниме попки!</p>
+									</div>
+									<div class="article-static">
+										<p>
+											<i class="fa fa-comment" aria-hidden="true"></i>
+											<span>872</span>
+										</p>
+										<p>
+											<i class="fa fa-eye" aria-hidden="true"></i>
+											<span>92271</span>
+										</p>
+										<p>
+											<i class="fa fa-heart" aria-hidden="true"></i>
+											<span>34555</span>
+										</p>
+									</div>
 								</header>
+								<div class="article-preview-descr">
+									<!-- Картинку загружать не обязательно, если ее нету то поставь заглушку, она есть в папке img -->
+									<img class="article-preview-img" src="https://ip2.i.lithium.com/1a37c41297517502854229d623f2fccf7c1ffdbf/687474703a2f2f692e696d6775722e636f6d2f706855616132592e6a7067" alt="img">
+									<!-- Максимальное количество символов должно быть таким, чтобы текст не выходилза рамки высоты картинки -->
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quibusdam illo necessitatibus, recusandae quia consectetur porro sapiente maiores ratione. Dolorem incidunt nam, assumenda recusandae autem consequuntur perferendis voluptatem vitae commodi.</p>
+								</div>
+								<footer>
+									<button type="submit">Продолжить</button>
+									<p>
+										<i class="fa fa-user" aria-hidden="true"></i>
+										<!-- Ссылка должна вести на автора записи -->
+										<a href="#">Никита Ворон</a>
+									</p>
+								</footer>
 							</article>
 						</li>
 						<li class="article-item">
 							<article class="article-preview">
 								<header>
-									<p>Название записи</p>
+									<div class="article-title">
+										<!-- В названии должно быть ограничение в 50 символов или где-то так -->
+										<p>Когда будет обновление на сайте?</p>
+									</div>
+									<div class="article-static">
+										<p>
+											<i class="fa fa-comment" aria-hidden="true"></i>
+											<span>76</span>
+										</p>
+										<p>
+											<i class="fa fa-eye" aria-hidden="true"></i>
+											<span>19872</span>
+										</p>
+										<p>
+											<i class="fa fa-heart" aria-hidden="true"></i>
+											<span>885</span>
+										</p>
+									</div>
 								</header>
+								<div class="article-preview-descr">
+									<!-- Картинку загружать не обязательно, если ее нету то поставь заглушку, она есть в папке img -->
+									<img class="article-preview-img" src="/img/no_image.png" alt="img">
+									<!-- Максимальное количество символов должно быть таким, чтобы текст не выходилза рамки высоты картинки -->
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quibusdam illo necessitatibus, recusandae quia consectetur porro sapiente maiores ratione. Dolorem incidunt nam, assumenda recusandae autem consequuntur perferendis voluptatem vitae commodi.</p>
+								</div>
+								<footer>
+									<button type="submit">Продолжить</button>
+									<p>
+										<i class="fa fa-user" aria-hidden="true"></i>
+										<a href="#">Тимур Попов</a>
+									</p>
+								</footer>
 							</article>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="sidebar">
-				
+				<div class="popular-articles">
+					<div class="header-popular-articles">
+						<h1>Самые популярные записи</h1>
+					</div>
+					<div class="pop-art-item">
+						<div class="pop-art-img">
+							<img src="img/no_image.png" alt="img">
+						</div>
+						<div class="pop-art-descr">
+							<h1><a href="#">Как выучить php за 1 ночь?</a></h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eveniet.</p>
+							<p>
+								<i class="fa fa-eye" aria-hidden="true"></i>
+								<span>342</span>
+							</p>
+						</div>
+					</div>
+					<div class="pop-art-item">
+						<div class="pop-art-img">
+							<img src="img/no_image.png" alt="img">
+						</div>
+						<div class="pop-art-descr">
+							<h1><a href="#">Как выучить php за 1 ночь?</a></h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eveniet.</p>
+							<p>
+								<i class="fa fa-eye" aria-hidden="true"></i>
+								<span>342</span>
+							</p>
+						</div>
+					</div>
+					<div class="pop-art-item">
+						<div class="pop-art-img">
+							<img src="img/no_image.png" alt="img">
+						</div>
+						<div class="pop-art-descr">
+							<h1><a href="#">Как выучить php за 1 ночь?</a></h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eveniet.</p>
+							<p>
+								<i class="fa fa-eye" aria-hidden="true"></i>
+								<span>342</span>
+							</p>
+						</div>
+					</div>
+					<div class="pop-art-item">
+						<div class="pop-art-img">
+							<img src="img/no_image.png" alt="img">
+						</div>
+						<div class="pop-art-descr">
+							<h1><a href="#">Как выучить php за 1 ночь?</a></h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eveniet.</p>
+							<p>
+								<i class="fa fa-eye" aria-hidden="true"></i>
+								<span>342</span>
+							</p>
+						</div>
+					</div>
+					<div class="pop-art-item">
+						<div class="pop-art-img">
+							<img src="img/no_image.png" alt="img">
+						</div>
+						<div class="pop-art-descr">
+							<h1><a href="#">Как выучить php за 1 ночь?</a></h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eveniet.</p>
+							<p>
+								<i class="fa fa-eye" aria-hidden="true"></i>
+								<span>342</span>
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
+			<!-- Вообщем-то смотри, можешь сделать пагинатор, а можешь подгрузку контента через ajax, просто рас комментируй блок с которым будешь работать -->
+<!-- 			<div class="view-more-article">
+				<button type="submit">Показать еще</button>
+			</div> -->
+			<div class="pagination">
+				<ul>
+					<li>Назад</li>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>Вперед</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="footer">
+			<footer>
+				<p>Все права защищены! &copy; Игорь Шмирко</p>
+			</footer>
 		</section>
 
 	</div>
